@@ -2,6 +2,27 @@
 [![npm](https://img.shields.io/npm/v/http-server.svg?style=flat-square)](https://www.npmjs.com/package/http-server) [![homebrew](https://img.shields.io/homebrew/v/http-server?style=flat-square)](https://formulae.brew.sh/formula/http-server) [![npm downloads](https://img.shields.io/npm/dm/http-server?color=blue&label=npm%20downloads&style=flat-square)](https://www.npmjs.com/package/http-server)
 [![license](https://img.shields.io/github/license/http-party/http-server.svg?style=flat-square)](https://github.com/http-party/http-server)
 
+# This fork of http-server has changes pulled to allow Unity to be served
+
+1. Clone this repo to a new folder on the server 
+
+e.g. git clone https://github.com/UCL-VR/http-server.git pipelines-similarity
+
+
+2. Navigate into the folder and delete package-lock.json
+
+3. initilalise
+
+npm i
+
+3. Start and save the process on an appropraite port
+
+pm2 start ./bin/http-server --name "pipelines-similarity" -- -p 8004 -g -c-1
+
+pm2 save
+
+
+
 # http-server: a simple static HTTP server
 
 `http-server` is a simple, zero-configuration command-line static HTTP server.  It is powerful enough for production usage, but it's simple and hackable enough to be used for testing, local development and learning.
